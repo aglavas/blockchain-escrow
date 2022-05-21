@@ -1,29 +1,29 @@
 <template>
   <div id="app">
-    <div v-if="ready" className="container">
-        <h1 className="text-center">Escrow</h1>
-        <div className="row">
-          <div className="col-sm-12">
+    <div v-if="ready" class="container">
+        <h1 class="text-center">Escrow</h1>
+        <div class="row">
+          <div class="col-sm-12">
              <p>Balance: <b> {{ balance }} </b> wei </p>
           </div>
         </div>
-        <div className="row">
-          <div className="col-sm-12">
-            <div className="form-group">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="form-group">
               <label for="deposit">Deposit </label>
               <br>
-              <input type="number" v-model="amount" className="form-control" id="deposit" />
+              <input type="number" v-model="amount" class="form-control" id="deposit" />
               <p><b> {{ results.amount }} </b></p>
               <ValidationErrors :errors="errors.amount"></ValidationErrors>
             </div>
             <br>
-            <button @click="deposit" className="btn btn-primary">Submit</button>
+            <button @click="deposit" class="btn btn-primary">Submit</button>
           </div>
         </div>
         <br />
-        <div className="row">
-          <div className="col-sm-12">
-             <button @click="release" className="btn btn-primary">Release</button>
+        <div class="row">
+          <div class="col-sm-12">
+             <button @click="release" class="btn btn-primary">Release</button>
              <p><b> {{ results.release }} </b></p>
               <ValidationErrors :errors="errors.release"></ValidationErrors>
           </div>
